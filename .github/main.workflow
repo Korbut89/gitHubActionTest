@@ -1,6 +1,8 @@
 workflow "New workflow" {
   on = "push"
+  resolves = ["Hello World"]
 }
-action "action a" {
-  uses = "./action-a/"
+
+action "Hello World" {
+  uses = "./action-a"
 }
