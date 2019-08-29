@@ -1,9 +1,9 @@
 FROM ubuntu:16.04
 
-LABEL "com.github.actions.name"="Hello World"
+LABEL "com.github.actions.name"="Custom action by Ricardo"
 LABEL "com.github.actions.description"="Write arguments to the standard output"
-LABEL "com.github.actions.icon"="mic"
-LABEL "com.github.actions.color"="purple"
+LABEL "com.github.actions.icon"="terminal"
+LABEL "com.github.actions.color"="red"
 
 EXPOSE 4230
 WORKDIR /opt/main
