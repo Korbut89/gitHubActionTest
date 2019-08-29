@@ -11,4 +11,5 @@ RUN apt update && apt install -y apt-utils vim subversion libapache2-mod-svn lib
 
 
 ADD entrypoint.sh /entrypoint.sh
+RUN chmod +x entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
