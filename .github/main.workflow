@@ -1,3 +1,3 @@
 action "teste" {
-  uses = "./action-a"
+  uses = "./action-a/"
 }
