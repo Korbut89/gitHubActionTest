@@ -5,10 +5,7 @@ LABEL "com.github.actions.description"="Write arguments to the standard output"
 LABEL "com.github.actions.icon"="terminal"
 LABEL "com.github.actions.color"="red"
 
-EXPOSE 4230
+EXPOSE 80
 WORKDIR /opt/main
-RUN apt update && apt install -y apt-utils vim subversion libapache2-mod-svn libsvn-dev npm nginx curl git sudo && curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash - && apt-get install -y nodejs && npm install yarn -g && echo '<h1>Teste Project</h1>' /opt/main/index.html && echo 'daemon off;' >> /etc/nginx/nginx.conf
+RUN apt update && apt install -y apt-utils vim subversion libapache2-mod-svn libsvn-dev npm nginx curl git sudo && curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash - && apt-get install -y nodejs && npm install yarn -g && echo '<h1>Teste Project</h1>' > /opt/main/index.html && echo 'daemon off;' >> /etc/nginx/nginx.conf
 
-ADD entrypoint.sh /entrypoint.sh
-RUN chmod +x entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]
