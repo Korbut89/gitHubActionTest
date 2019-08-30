@@ -1,3 +1,7 @@
+LABEL "com.github.actions.name"="Action for cypress"
+LABEL "com.github.actions.icon"="terminal"
+LABEL "com.github.actions.color"="red"
+
 FROM ubuntu:16.04
 RUN mkdir /opt/cypress \
  && apt update && apt install -y \
