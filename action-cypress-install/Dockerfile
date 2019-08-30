@@ -8,11 +8,11 @@ RUN mkdir /opt/cypress \
                                vim \
                                htop \
                                nodejs \
-                               npm
-WORKDIR /opt/cypress
-RUN npm init \
- && npm install cypress --save-dev \
- && ./node_modules/.bin/cypress run
+                               npm \
+&& cd /opt/cypress \
+&& npm init \
+&& npm install cypress --save-dev \
+&& ./node_modules/.bin/cypress run
                                 
                                
                               
